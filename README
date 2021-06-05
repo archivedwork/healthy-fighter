@@ -1,0 +1,7 @@
+Dear User,
+
+
+In order to run application in container go to the HealhtyFighterApi folder.
+1. gradle clean build
+2. After successful build run "docker build --tag=healthyfighter ."
+3. Finally: "docker run -it -p 8080:8080 healthyfighter"

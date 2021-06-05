@@ -1,0 +1,174 @@
+<div *ngIf="isSignedUp; else signupForm">
+  Your registration is successful. Please login!
+  <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="btn btn-outline-success my-2 my-sm-0" href="/#/login">Login</a>
+        </li>
+      </ul>
+    </form>
+</div>
+<ng-template #signupForm>
+    <nav class="navbar navbar-expand-md navbar-dark primary-color fixed-top">
+        <!-- <a class="navbar-brand" href="#">Healthy Fighter</a> -->
+        <img src="/assets/images/Healthy_fighter_logo.png" height="80px" alt="logo"/>
+        <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+         <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+          </ul> -->
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="btn btn-outline-success my-2 my-sm-0" href="/#/login">Login</a>
+              </li>
+            </ul>
+          </form> -->
+        </div>
+      </nav>
+  <body>
+<div class="">
+  <div class="">
+      <div class="container sec-cus">
+        <div class="col-12 col-lg-12 mx-auto text-center">
+          <div class="container">
+            <form class="form-horizontal" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <h2>New User</h2>
+                  <hr>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 field-label-responsive">
+                  <label for="name">Name</label>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+        <input type="text" class="form-control" name="name" [(ngModel)]="form.name" #name="ngModel" required />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                                    <div *ngIf="f.submitted && name.invalid">
+          <div *ngIf="name.errors.required">Name is required</div>
+        </div>
+                        </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 field-label-responsive">
+                  <label for="surname">Surname</label>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                      <input type="text" class="form-control" name="surname" [(ngModel)]="form.surname" #name="ngModel" required />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-control-feedback">
+                    <span class="text-danger align-middle">
+                      <div *ngIf="f.submitted && surname.invalid">
+                          <div *ngIf="surname.errors.required">Surame is required</div>
+                        </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 field-label-responsive">
+                  <label for="name">Username</label>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+        <input type="text" class="form-control" name="username" [(ngModel)]="form.username" #name="ngModel" required />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                                    <div *ngIf="f.submitted && username.invalid">
+          <div *ngIf="username.errors.required">Username is required</div>
+        </div>
+                        </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 field-label-responsive">
+                  <label for="email">E-Mail Address</label>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                      <input type="text" class="form-control" name="email" [(ngModel)]="form.email" #email="ngModel" required email>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                                    <div *ngIf="f.submitted && email.invalid">
+          <div *ngIf="email.errors.required">Email is required</div>
+          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+                        </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 field-label-responsive">
+                  <label for="password">Password</label>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-danger">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                      <input type="password" class="form-control" name="password" [(ngModel)]="form.password" #password="ngModel"
+          required minlength="6">
+                    </div>
+                  </div>
+                </div>
+        <div *ngIf="f.submitted && password.invalid">
+          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <button class="btn btn-success"><i class="fa fa-user-plus"></i></button>
+                  <a href="/#/users" class="btn btn-danger"><i class="fa fa-times"></i></a>
+				          <div *ngIf="f.submitted && isSignUpFailed" class="alert alert-warning">
+          Adding user failed!<br/>{{errorMessage}}
+        </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</div>
+</body>
+</ng-template>
+

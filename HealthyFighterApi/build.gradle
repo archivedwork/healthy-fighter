@@ -1,0 +1,55 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.9.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.healthyfighter'
+version = '0.0.1-HEALTHYFIGHTERAPI-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+
+test {
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'io.jsonwebtoken:jjwt'
+
+    compileOnly 'org.projectlombok:lombok'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'mysql:mysql-connector-java'
+
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:2.23.0'
+
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.2'
+}

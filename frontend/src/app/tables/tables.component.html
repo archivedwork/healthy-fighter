@@ -1,0 +1,74 @@
+<div class="" id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row row-stat">
+      <div class="col-sm-12">
+        <div class="row">
+
+          <div class="col-md-12">
+        <div class="panel panel-default">
+
+          <div class="panel-heading panel-heading-no-divider">Natural Foods<span><a class="btn btn-outline-primary my-2 my-sm-0 btn-cuscus" href="/#/naturalfoods/new">Add New</a> </span>
+          </div>
+          <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Food Name</th>
+                      <th>Vitamin</th>
+                      <th>Protein</th>
+                      <th>Carb</th>
+                      <th>Fight</th>
+                      <th>Alergic</th>
+                      <!-- <th>Description</th> -->
+                      <th>Expert</th>
+                      <!-- <th>ImageURL</th> -->
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let product of products">
+                    <tr>
+                      <td class="w-25">{{product.id}}</td>
+                      <td class="w-25">{{product.name}}</td>
+                      <td>{{product.vitamine}}</td>
+                      <td>{{product.protein}}</td>
+                      <td>{{product.carb}}</td>
+                      <td>{{product.fight}}</td>
+                      <td>{{product.isAllergic}}</td>
+                      <!-- <td>{{product.description}}</td> -->
+                      <td>{{product.addedBy.name}}</td>
+                      <!-- <td>{{product.link}}</td> -->
+                      <td width="20%">
+                        <a class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/naturalfoods/edit', product.id]"><i class="fa fa-edit"></i></a>
+                        <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/naturalfoods/view', product.id]"><i class="fa fa-eye"></i></a>
+<!--
+                        <a class="btn btn-outline-danger my-2 my-sm-0" href="/#/naturalfoods/remove"><i class="fa fa-trash"></i></a>
+-->
+
+                      </td>
+                    </tr>
+
+
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright © 2019 :
+    <a href="#"> ELTE - IK</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

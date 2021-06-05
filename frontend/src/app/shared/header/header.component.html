@@ -1,0 +1,20 @@
+<header>
+    <div class="headerwrapper">
+        <div class="header-left">
+              <img src="/assets/images/Healthy_fighter_logo1.png" class="logo1"  width="100px"/>
+
+        </div>
+        <div *ngIf="username; else loggedOut">
+            <div class="header-right">
+                <a class="email-custom" target="_blank"> <b> {{ username }} </b>  </a>
+                <a class="btn btn-social-icon btn-github hidden-sm-down" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+            </div><!-- header-right -->
+        </div>
+        <ng-template #loggedOut>
+            <div class="header-right">
+                <!-- <a class="btn btn-social-icon btn-github hidden-sm-down"  href="/#/login"><i class="fa fa-sign-out"></i></a> -->
+            </div> 
+        </ng-template> 
+
+    </div><!-- headerwrapper -->
+</header>

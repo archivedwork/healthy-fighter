@@ -1,0 +1,249 @@
+<nav class="navbar navbar-expand-md navbar-dark primary-color fixed-top">
+  <!-- <a class="navbar-brand" href="#">Healthy Fighter</a> -->
+  <img src="/assets/images/Healthy_fighter_logo.png" height="80px" alt="logo"/>
+  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+     <!--  <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Team</a>
+      </li>
+    -->
+     
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="btn btn-outline-success my-2 my-sm-0" href="/#/login">Login</a>
+        </li>
+      </ul>
+       <a class="btn btn-outline-success my-2 my-sm-0" href="https://play.google.com/store/apps/details?id=com.healthy.fighters">Download</a> 
+    </form>
+  </div>
+</nav>
+<body>
+<div class="">
+  <div class="">
+
+<ngb-carousel  *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="">
+      <img class="img-carosal" src="assets/images/cancer.jpeg" alt="Random first slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>Healthy Fighter</h3>
+<!--      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Download</button>-->
+      <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+    </div>
+  </ng-template>
+  <!--<ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img class="img-carosal" [src]="images[1]" alt="Random second slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[2]" alt="Random third slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>-->
+</ngb-carousel>
+</div>
+</div>
+
+<!-- Feature Cards -->
+<section class="d-flex bg-light sec-custom" id="feature-cards">
+  <div class="container d-flex justify-content-center">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-12 align-self-center">
+        <div class="row">
+          <div class="col-12 col-lg-7 mx-auto text-center">
+            <h2 class="display-4">App Features</h2>
+            <!-- <p class="text-muted lead mb-5">This snipped does not use any custom styling or scripting but does make use of Font-Awesome free.</p>-->
+          <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-3">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col mx-auto text-center">
+                    <i class="fa fa-rocket fa-4x text-info"></i>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 text-center">
+                    <p class="text-info">Easy to Use</p>
+                    <p class="text-secondary">Simple designs easy to use application</p>
+<!--                    <button class="btn btn-info mt-3 px-4">Click Here</button>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col mx-auto text-center">
+                    <i class="fa fa-desktop fa-4x text-warning"></i>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 text-center">
+                    <p class="text-info">Web dashboard</p>
+                    <p class="text-secondary">Web control dashboard for admin</p>
+<!--                    <button class="btn btn-warning mt-3 px-4">Click Here</button>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col mx-auto text-center">
+                    <i class="fa fa-envelope fa-4x text-success"></i>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 text-center">
+                    <p class="text-info">Trust Resources</p>
+                    <p class="text-secondary">trust information resources</p>
+<!--                    <button class="btn btn-success mt-3 px-4">Click Here</button>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col mx-auto text-center">
+                    <i class="fa fa-smile-o fa-4x text-danger"></i>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 text-center">
+                    <p class="text-info">Free</p>
+                    <p class="text-secondary">free application on app store and googleplay</p>
+<!--                    <button class="btn btn-danger mt-3 px-4">Click Here</button>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container-fluid sec-cus">
+    <div class="col-12 col-lg-7 mx-auto text-center">
+      <div class="row heading heading-icon ">
+        <h2>About</h2>
+      </div>
+       <p class="text-muted lead mb-5">Healthy Fighter is a mobile application which helps giving hope to cancer patients by suggesting them what kind of natural foods are good for their health and fight by slowing cancer growing also, the app can suggest a vitamin products which also helps fighing cancer</p>
+       <a href="https://play.google.com/store/apps/details?id=com.healthy.fighters"><img src="/assets/images/googleplay.png" height="80px" alt="logo"/></a>
+      <br>
+    </div>
+  </div>
+</section>
+
+<section class="our-webcoderskull padding-lg">
+  <div class="container">
+    <div class="row heading heading-icon ">
+      <h2>Our Team</h2>
+    </div>
+    <ul class="row">
+      <li class="col-12 col-md-2 col-lg-3">
+        <div class="cnt-block equal-hight" style="height: 349px;">
+          <figure><img src="/assets/images/IMG-4130.JPG" class="img-responsive" alt=""></figure>
+          <h3><a href="">Mohammed</a></h3>
+          <p>DevOps Developer</p>
+          <!-- <ul class="follow-us clearfix">
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          </ul> -->
+        </div>
+      </li>
+      <li class="col-12 col-md-2 col-lg-3">
+        <div class="cnt-block equal-hight" style="height: 349px;">
+          <figure><img src="/assets/images/latif.jpeg" class="img-responsive" alt=""></figure>
+          <h3><a href="">Latif </a></h3>
+          <p>Backend Developer</p>
+          <!-- <ul class="follow-us clearfix">
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          </ul> -->
+        </div>
+      </li>
+      <li class="col-12 col-md-2 col-lg-3">
+        <div class="cnt-block equal-hight" style="height: 349px;">
+          <figure><img src="/assets/images/baska.jpeg" class="img-responsive" alt=""></figure>
+          <h3><a href="">Baska </a></h3>
+          <p>Frontend Developer</p>
+          <!-- <ul class="follow-us clearfix">
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          </ul> -->
+        </div>
+      </li>
+      <li class="col-12 col-md-2 col-lg-3">
+        <div class="cnt-block equal-hight" style="height: 349px;">
+          <figure><img src="/assets/images/firas.jpg" class="img-responsive" alt=""></figure>
+          <h3><a href="">Firas </a></h3>
+          <p>Fullstack Developer</p>
+          <!-- <ul class="follow-us clearfix">
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          </ul> -->
+        </div>
+      </li>
+      <li class="col-12 col-md-2 col-lg-3">
+        <div class="cnt-block equal-hight" style="height: 349px;">
+          <figure><img src="/assets/images/kris.jpg" class="img-responsive" alt=""></figure>
+          <h3><a href="http://www.webcoderskull.com/">Kristán </a></h3>
+          <p>External Expert</p>
+          <!-- <ul class="follow-us clearfix">
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          </ul> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</body>
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+  <div class="container text-center">
+    <small>Copyright &copy; ELTE-IK 2019</small>
+  </div>
+</footer>

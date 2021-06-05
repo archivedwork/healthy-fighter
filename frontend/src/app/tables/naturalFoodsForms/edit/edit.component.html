@@ -1,0 +1,111 @@
+<div class="" id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row row-stat">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading panel-heading-divider">Edit Natural Food<span class="panel-subtitle"></span>
+          </div>
+          <div class="panel-body">
+            <div class="xs-mt-10 xs-mb-10  ">
+              <div class="row">
+                <div class="col-md-8">
+                  <form #productForm="ngForm" (ngSubmit)="save(productForm.value)" class="form-horizontal">
+                      <input type="hidden" name="id" [(ngModel)]="product.id">
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-1">Food Name</label>
+                        <div class="col-sm-9">
+                          <input id="form-control-1" placeholder="Product Name" [(ngModel)]="product.name"
+                          required name="name" #name class="form-control" type="text">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-1">Vitamin</label>
+                        <div class="col-sm-9">
+                          <input id="form-control-1" placeholder="Product vitamine" [(ngModel)]="product.vitamine"
+                          required name="vitamine" #vitamine class="form-control" type="text">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-1">Protein</label>
+                        <div class="col-sm-9">
+                          <input id="form-control-1" placeholder="Product protein" [(ngModel)]="product.protein"
+                          required name="protein" #protein  class="form-control" type="text">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-1">Carb</label>
+                        <div class="col-sm-9">
+                          <input id="form-control-1" placeholder="Product carb" [(ngModel)]="product.carb"
+                          required name="carb" #carb class="form-control" type="text">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-1">Fight</label>
+                        <div class="col-sm-9">
+                          <input id="form-control-1" placeholder="Product fight" [(ngModel)]="product.fight"
+                          required name="fight" #fight class="form-control" type="text">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-1">Alergic</label>
+                        <div class="col-sm-1">
+                          <input id="form-control-1" placeholder="Product Allergic" [(ngModel)]="product.isAllergic"
+                           name="isAllergic" #isAllergic class="form-control" type="checkbox">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-1">Image URL</label>
+                        <div class="col-sm-9">
+                          <input id="form-control-1" placeholder="Product link" [(ngModel)]="product.link"
+                          required name="link" #link class="form-control" type="text">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-8">Description</label>
+                        <div class="col-sm-9">
+                          <textarea id="form-control-8" placeholder="Product description" [(ngModel)]="product.description"
+                          required name="description" #description class="form-control" rows="3"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <!--<div class="col-md-3"></div>-->
+                      <div class="col-md-12">
+                          <button type="submit" mat-raised-button color="primary" [disabled]="!productForm.form.valid" class="btn btn-success">Save</button>
+                          <button mat-raised-button color="secondary" (click)="remove(product.id)"
+                          *ngIf="product.id" type="button" class="btn btn-danger">Delete</button>
+                          <a class="btn btn-warning" routerLink="/naturalfoods">Cancel</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

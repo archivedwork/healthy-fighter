@@ -1,0 +1,254 @@
+n<div class="" id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row row-stat">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading panel-heading-divider">View Natural Food<span class="panel-subtitle"></span>
+          </div>
+          <div class="panel-body">
+            <div class="xs-mt-10 xs-mb-10  ">
+              <div class="row">
+                <div class="col-md-8">
+                  <form class="form-horizontal">
+
+                      <div class="form-group">
+                          <div class="row">
+                            <label class="col-sm-3 control-label" for="form-control-6">No.</label>
+                            <div class="col-sm-9">
+                              <input id="form-control-6" [(ngModel)]="product.id"
+                              required name="id" #id class="form-control" type="text" placeholder="ID"
+                                     disabled="disabled">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="row">
+                            <label class="col-sm-3 control-label" for="form-control-6">Food Name</label>
+                            <div class="col-sm-9">
+                              <input id="form-control-6" placeholder="Product Name" [(ngModel)]="product.name"
+                              required name="name" #name class="form-control" type="text" disabled>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="row">
+                            <label class="col-sm-3 control-label" for="form-control-6">Vitamin</label>
+                            <div class="col-sm-9">
+                              <input id="form-control-6" [(ngModel)]="product.vitamine"
+                              required name="vitamine" #vitamine class="form-control" type="text" placeholder="Vitamin" disabled>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="row">
+                            <label class="col-sm-3 control-label" for="form-control-6">Protein</label>
+                            <div class="col-sm-9">
+                              <input id="form-control-6" [(ngModel)]="product.protein"
+                              required name="protein" #protein class="form-control" type="text" placeholder="Protein" disabled>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="row">
+                            <label class="col-sm-3 control-label" for="form-control-6">Carb</label>
+                            <div class="col-sm-9">
+                              <input id="form-control-6" [(ngModel)]="product.carb"
+                              required name="carb" #carb class="form-control" type="text" placeholder="Carb" disabled>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="row">
+                            <label class="col-sm-3 control-label" for="form-control-6">Fight</label>
+                            <div class="col-sm-9">
+                              <input id="form-control-6" [(ngModel)]="product.fight"
+                              required name="fight" #fight class="form-control" type="text" placeholder="Fight" disabled>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="row">
+                            <label class="col-sm-3 control-label" for="form-control-6">Alergic</label>
+                            <div class="col-sm-9">
+                              <input id="form-control-6" [(ngModel)]="product.isAllergic"
+                              required name="isAllergic" #isAllergic class="form-control" type="text" placeholder="Alergic" disabled>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <div class="row">
+                            <label class="col-sm-3 control-label" for="form-control-1">Image URL</label>
+                            <div class="col-sm-9">
+                              <input id="form-control-1" placeholder="Product link" [(ngModel)]="product.link"
+                              required name="link" #link class="form-control" type="text" disabled>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                              <label class="col-sm-3 control-label" for="form-control-8">Description</label>
+                              <div class="col-sm-9">
+                                <textarea id="form-control-8" [(ngModel)]="product.description"
+                                required name="description" #description class="form-control" rows="3" disabled></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <a mat-button class="btn btn-warning" routerLink="/naturalfoods">Cancel</a>
+
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-1">Text input</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <input id="form-control-1" class="form-control" type="text">-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-2">Rounded text input</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <input id="form-control-2" class="form-control input-pill" type="text">-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-4">Password input</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <input id="form-control-4" class="form-control" type="password" value="password">-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-5">Placeholder Input</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <input id="form-control-5" class="form-control" type="email"-->
+<!--                                 placeholder="Placeholder input text">-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-6">Disabled Input</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <input id="form-control-6" class="form-control" type="text" placeholder="Disabled input text"-->
+<!--                                 disabled="disabled">-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-7">Read only input</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <input id="form-control-7" class="form-control" type="email" value="Read only input text"-->
+<!--                                 readonly="readonly">-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label">Static input</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <p class="form-control-static">email@example.com</p>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-8">Textarea</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <textarea id="form-control-8" class="form-control" rows="3"></textarea>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-9">Select</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <select id="form-control-9" class="form-control">-->
+<!--                            <option value="corporate">Corporate</option>-->
+<!--                            <option value="creative">Creative</option>-->
+<!--                            <option value="ecommerce">eCommerce</option>-->
+<!--                            <option value="mobile">Mobile</option>-->
+<!--                            <option value="retail">Retail</option>-->
+<!--                            <option value="technology">Technology</option>-->
+<!--                            <option value="wedding">Wedding</option>-->
+<!--                          </select>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-10">Multiple select</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <select id="form-control-10" class="form-control" multiple="multiple">-->
+<!--                            <option value="c-plus-plus">C++</option>-->
+<!--                            <option value="css">CSS</option>-->
+<!--                            <option value="java">Java</option>-->
+<!--                            <option value="javascript">JavaScript</option>-->
+<!--                            <option value="php">PHP</option>-->
+<!--                            <option value="python">Python</option>-->
+<!--                            <option value="ruby">Ruby</option>-->
+<!--                          </select>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label" for="form-control-11">File input</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <input id="form-control-11" type="file" accept="image/*" multiple="multiple">-->
+<!--                          <p class="help-block">-->
+<!--                            <small>Unlimited number of files can be uploaded to this field. Allowed types: png gif jpg-->
+<!--                              jpeg.-->
+<!--                            </small>-->
+<!--                          </p>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                      <div class="row">-->
+<!--                        <label class="col-sm-3 control-label">Checkboxes and radios</label>-->
+<!--                        <div class="col-sm-9">-->
+<!--                          <div class="checkbox">-->
+<!--                            <label>-->
+<!--                              <input type="checkbox" name="signed" checked="checked"> Keep me signed in-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                          <div class="radio">-->
+<!--                            <label>-->
+<!--                              <input type="radio" name="period" value="day"> Day-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                          <div class="radio">-->
+<!--                            <label>-->
+<!--                              <input type="radio" name="period" value="week" checked="checked"> Week-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                          <div class="radio">-->
+<!--                            <label>-->
+<!--                              <input type="radio" name="period" value="month"> Month-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>

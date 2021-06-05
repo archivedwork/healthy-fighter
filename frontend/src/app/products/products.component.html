@@ -1,0 +1,63 @@
+<div class="" id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row row-stat">
+      <div class="col-sm-12">
+        <div class="row">
+
+          <div class="col-md-12">
+            <div class="panel panel-default">
+
+              <div class="panel-heading panel-heading-no-divider">Vitamin Products<span><a class="btn btn-outline-primary my-2 my-sm-0 btn-cuscus" href="/#/products/new">Add New</a> </span>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Product Name</th>
+                    <th>Vitamin</th>
+                    <th>Fight</th>
+                    <th>Allergic</th>
+                    <th>Expert</th>
+                    <th>ImageURL</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody *ngFor="let product of products">
+                  <tr>
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.vitamine}}</td>
+                    <td>{{product.fight}}</td>
+                    <td>{{product.isAllergic}}</td>
+                    <td>{{product.addedBy.name}}</td>
+                    <td>{{product.link}}</td>
+                    <td width="20%">
+                      <a class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/products/edit', product.id]"><i class="fa fa-edit"></i></a>
+                      <a class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/products/view', product.id]"><i class="fa fa-eye"></i></a>
+<!--
+                      <a class="btn btn-outline-danger my-2 my-sm-0" href="/#/nproducts/remove"><i class="fa fa-trash"></i></a>
+-->
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright © 2019 :
+    <a href="#"> ELTE - IK</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
